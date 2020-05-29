@@ -1,0 +1,30 @@
+<div class="ui inverted dimmer" [class.active]='loading'>
+    <div class="ui text loader">Loading</div>
+</div>
+
+<div class="jumbotron bg-white text-center">
+  <h1 class="display-4">Covid-19 by Country</h1>
+  <hr>
+
+<div class="row">
+  <div class="col">
+    <div class="input-group">
+      <div class="search-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <input class="form-control" type="text" [(ngModel)]="term" placeholder="Search....">
+    </div>
+    <div class="card" *ngFor="let c of data | filter:term">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ c.country }}
+        </h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+          Cases: {{ c.cases }} | Today: {{ c.todayCases }} | Active: {{ c.active }}<br>
+          Deaths: {{ c.deaths }} | Today: {{ c.todayDeaths }}<br>
+          Recovered: {{ c.recovered }}
+        </h6>
+      </div>
+    </div>
+  </div>
+</div>

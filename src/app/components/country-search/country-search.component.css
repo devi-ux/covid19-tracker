@@ -1,0 +1,12 @@
+.search-icon {
+  width: 8%;
+  border-color: black;
+  border-width: thin;
+  display: inline-block;
+  padding-top: 7px;
+  background-color: beige;
+}
+
+.input-group {
+  padding-bottom: 10px;
+}
